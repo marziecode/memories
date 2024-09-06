@@ -2,8 +2,6 @@ import gifImg from "../assets/gifImg.gif";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import Header from "../components/header/Header";
-// import img1 from "../assets/img2.jpg";
 import { MockData } from "../data";
 
 function Home() {

@@ -17,7 +17,7 @@ function Home() {
     <div className=" w-full bg-black  flex flex-col items-center justify-start py-2">
       <div className=" w-full flex justify-between items-center mt-6">
         <img src={gifImg} className="w-32 h-32" />
-        <h4 className=" font-sans text-white text-center text-xl leading-10">
+        <h4 className=" font-sans text-white text-center text-2xl leading-10">
           باورم نیست پدر رفتی و خاموش شدی <br /> ترک ما کردی و با خاک هم آغوش
           شدی
         </h4>

@@ -1,15 +1,22 @@
 import gifImg from "../assets/gifImg.gif";
-import img1 from "../assets/img1.jpg";
-import img2 from "../assets/img2.jpg";
-import img3 from "../assets/img3.jpg";
-import img4 from "../assets/img4.jpg";
-import video1 from "../assets/video1.mp4";
-import video2 from "../assets/video2.mp4";
-import BottomMenu from "./BottomMenu";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+// import Header from "../components/header/Header";
+// import img1 from "../assets/img2.jpg";
+import { MockData } from "../data";
 
-function SendSms() {
+function Home() {
+  let settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
-    <div className="w-full bg-[#000] flex flex-col items-center">
+    <div className=" w-full bg-black  flex flex-col items-center justify-start py-2">
       <div className=" w-full flex justify-between items-center mt-6">
         <img src={gifImg} className="w-32 h-32" />
         <h4 className=" font-sans text-white text-center text-3xl leading-10">
@@ -18,23 +25,37 @@ function SendSms() {
         </h4>
         <img src={gifImg} className="w-32 h-32" />
       </div>
-      <img src={img1} className=" w-96 rounded-xl mt-10" />
-      <img src={img2} className=" w-64 rounded-xl mt-6" />
 
-      <img src={img3} className=" w-64 rounded-xl mt-6" />
-      <img src={img4} className=" w-64 rounded-xl mt-6" />
+      <div className="w-3/4 mt-10">
+        <Slider {...settings}>
+          {MockData.images.map((item, index) => {
+            return (
+              <div key={index} className="bg-[#000]">
+                <div className="flex flex-col items-center">
+                  <img src={item} className="w-60 h-60 object-contain block" />
+                </div>
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
 
-      <video controls className=" w-80 mt-6 rounded-xl">
-        <source src={video2} type="video/mp4" />
-      </video>
-
-      <video controls className=" w-80 mt-6 rounded-xl">
-        <source src={video1} type="video/mp4" />
-      </video>
-
-      <BottomMenu/>
-
+      <div className="w-3/4 mt-10">
+        <Slider {...settings}>
+          {MockData.videos.map((item, index) => {
+            return (
+              <div key={index} className="bg-[#000]">
+                <div className="flex flex-col items-center">
+                  <video controls className=" w-64 h-64 ">
+                    <source src={item} type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
     </div>
   );
 }
-export default SendSms;
+export default Home;

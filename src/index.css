@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    background-color: black;
+}
+
 @font-face {
     font-family: 'IRANSans-R';
     src: url('./assets/fonts/IRANSansX-Regular.ttf') format('truetype');
@@ -11,6 +15,12 @@
 @font-face {
     font-family: 'IranNastaliq';
     src: url('./assets/fonts/IranNastaliq.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yekan';
+    src: url('./assets/fonts/Yekan.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

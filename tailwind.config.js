@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["IranNastaliq"],
-        serif: ["IRANSansX-Regular"],
+        serif: ["Yekan"],
       },
       boxShadow: {
         inputShadow: "0px 0px 10px 0px   rgba(0, 0, 0, 0.1)",

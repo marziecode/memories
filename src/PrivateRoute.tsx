@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import BottomMenu from "./screens/BottomMenu";
+import BottomMenu from "./components/bottomMenu/BottomMenu";
 // import { AuthContext } from './App';
 
 export function PrivateRoute({ Page }: { Page: React.ReactElement }) {
